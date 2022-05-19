@@ -39,3 +39,9 @@ img {
   display: block;
   margin: 0 0;
 }
+
+canvas {
+  position: absolute;
+  left: 100px;
+  top: 0px;
+}
