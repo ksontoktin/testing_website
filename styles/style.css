@@ -31,11 +31,8 @@ html {
 }
 
 body {
-  width: 1480px;
-  margin: 0 155;
+  width: 1350px;
   background-color: #FFFFFF;
-  padding: 10px 50px 50px 100px;
-  border: 20px solid black;
 }
 
 img {
