@@ -1,10 +1,9 @@
+body {
+  width: 2000px;
+  background-color: #FFFFFF;
+}
+
 html {
   font-size: 20px; 
   font-family: 'Manrope', manrope;
-}
-
-canvas {
-  position: absolute;
-  left: 0px;
-  top: 0px;
 }
