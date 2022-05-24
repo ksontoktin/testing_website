@@ -2,54 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>тест питоновского кода 2</title>
+    <title>видево</title>
 
     <link href="styles/style3.css" rel="stylesheet" type="text/css"> <!-- ссылка на css -->
     <link href='http://fonts.googleapis.com/css?family=Manrope' rel='stylesheet' type='text/css'> <!-- ссылка на шрифт -->
 
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> <!-- проба скрипта на питоне -->
-
   </head>
   <body>
 
-    <!-- <img src="images/my_photo.png" alt="фотография меня" style="width:15%;"> -->
-    <!-- <img src="images/snejinka.jpeg" alt="настина снежинка" style="width:10%;"> -->
-
-    <!-- <py-env> -->
-    <!-- - bs4 -->
-    <!-- </py-env> -->
-
-    <py-script>
-
-
-    from urllib.request import urlopen
-
-    random.seed(datetime.datetime.now()) 
-
-    def getLinks(articleUrl):
-      html = urlopen('http://en.wikipedia.org{}'.format(articleUrl)) 
-      bs = BeautifulSoup(html, 'html.parser')
-      return bs.find('div', {'id':'bodyContent'}).find_all('a', href=re.compile('^(/wiki/)((?!:).)*$'))
-
-    links = getLinks('/wiki/Kevin_Bacon') 
-    all_links = []
-    for i in links:
-      all_links.append(i.attrs['href'])
-
-    print(all_links)
-    
-    all_articles = ['/wiki/Kevin_Bacon'] * len(links)
-
-    while len(links) > 100:
-      newArticle = links[random.randint(0, len(links)-1)].attrs['href']
-      print(newArticle)
-      links = getLinks(newArticle)
-      all_articles.extend([newArticle] * len(links))
-      for i in links:
-          all_links.append(i.attrs['href'])
-    </py-script>
-
-    <script src="scripts/main.js"></script> <!-- связка с js файлом -->
+    <video style = "position:absolute; left:0%" width="1675" height="1675" autoplay loop muted poster="poster.png">
+      <source src="videos/лодка.mp4" type="video/mp4">
+    </video>
 
   </body>
 

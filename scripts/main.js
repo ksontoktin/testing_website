@@ -1,13 +1,4 @@
-var myImage = document.querySelector('img');
 
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/my_photo.png') {
-      myImage.setAttribute ('src','images/snejinka.jpeg');
-    } else {
-      myImage.setAttribute ('src','images/my_photo.png');
-    }
-}
 
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
@@ -29,3 +20,6 @@ if(!localStorage.getItem('name')) {
 myButton.onclick = function() {
   setUserName();
 }
+
+var vid = document.querySelector("video");
+vid.playbackRate = 0.25;
