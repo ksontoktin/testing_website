@@ -14,6 +14,7 @@ canvas.addEventListener("mousedown", function(e){
     context.beginPath();
     context.moveTo(mouse.x, mouse.y);
 });
+
 canvas.addEventListener("mousemove", function(e){
      
     if(draw==true){
@@ -24,6 +25,7 @@ canvas.addEventListener("mousemove", function(e){
         context.stroke();
     }
 });
+
 canvas.addEventListener("mouseup", function(e){
      
     mouse.x = e.pageX - this.offsetLeft;
@@ -33,3 +35,13 @@ canvas.addEventListener("mouseup", function(e){
     context.closePath();
     draw = false;
 });
+
+var button = document.getElementById('btn-download');
+button.addEventListener('click', function (e) {
+    var dataURL = canvas.toDataURL('image/png');
+    button.href = dataURL;
+});
+
+window.onbeforeunload = function(){
+  return 'Are you sure you want to leave?';
+};
