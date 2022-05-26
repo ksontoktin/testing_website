@@ -43,5 +43,5 @@ button.addEventListener('click', function (e) {
 });
 
 window.onbeforeunload = function(){
-  return 'Are you sure you want to leave?';
+  return 'всё может стереться. точно хотите перезагрузить?';
 };
